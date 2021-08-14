@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/radio1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/wynik"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="252dp"
+        android:text="Wynik: 0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/liczba_pytan"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/wynik"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Pytanie: 1/x "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wynik"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pytanie">
+
+        <RadioButton
+            android:id="@+id/opcja1"
+            android:layout_width="320dp"
+            android:layout_height="32dp"
+            android:text="Opcja1"
+            android:textAlignment="viewStart" />
+
+        <RadioButton
+            android:id="@+id/opcja2"
+            android:layout_width="320dp"
+            android:layout_height="32dp"
+            android:text="Opcja2" />
+
+        <RadioButton
+            android:id="@+id/opcja3"
+            android:layout_width="320dp"
+            android:layout_height="32dp"
+            android:text="Opcja3" />
+
+        <RadioButton
+            android:id="@+id/opcja4"
+            android:layout_width="320dp"
+            android:layout_height="32dp"
+            android:text="Opcja4" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/pytanie"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik" />
+
+    <Button
+        android:id="@+id/odpowiedz"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="125dp"
+        android:text="Odpowiedz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/wiadomoscSMS"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/odpowiedz" />
+
+    <EditText
+        android:id="@+id/wiadomoscSMS2"
+        android:layout_width="369dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wiadomoscSMS" />
+
+    <TextView
+        android:id="@+id/yWartosc"
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/wynik"
+        app:layout_constraintEnd_toStartOf="@+id/akcJeden"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/akcJeden"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/liczba_pytan"
+        app:layout_constraintEnd_toStartOf="@+id/zmiana"
+        app:layout_constraintStart_toEndOf="@+id/yWartosc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/zmiana"
+        android:layout_width="138dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/liczba_pytan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/akcJeden"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
